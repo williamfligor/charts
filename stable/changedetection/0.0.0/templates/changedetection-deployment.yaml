@@ -13,6 +13,8 @@ spec:
     type: Recreate
   template:
     metadata:
+      labels:
+        io.kompose.service: changedetection
     spec:
       containers:
         - env:
