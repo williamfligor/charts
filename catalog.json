@@ -1,13 +1,37 @@
 {
     "charts": {
         "changedetection": {
+            "app_readme": "",
             "categories": [
-                "utility"
             ],
+            "description": "",
             "healthy": true,
             "healthy_error": null,
+            "home": "https://changedetection.app/",
             "location": "/__w/charts/charts/charts/changedetection",
-            "name": "changedetection"
+            "latest_version": "1.1.1",
+            "latest_app_version": "231128",
+            "latest_human_version": "231128_1.1.1",
+            "last_update": "2023-12-03 20:13:07",
+            "name": "changedetection",
+            "recommended": false,
+            "title": "Changedetection",
+            "maintainers": [
+                {
+                    "name": "William Fligor",
+                    "url": "https://www.truenas.com/",
+                    "email": "no@email.com"
+                }
+            ],
+            "tags": [
+                
+            ],
+            "screenshots": [
+            ],
+            "sources": [
+                "https://changedetection.io/"
+            ],
+            "icon_url": "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/8536af0845b74918d1b2439d30ac4d5b3e59ec94/changedetectionio/static/images/generic-icon.svg"
         }
     }
 }
