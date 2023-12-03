@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    labels:
+  labels:
     io.kompose.service: changedetection
   name: changedetection
 spec:
