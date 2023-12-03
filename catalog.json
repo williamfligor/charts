@@ -1,6 +1,9 @@
 {
     "charts": {
         "changedetection": {
+            "categories": [
+                "utility"
+            ],
             "name": "changedetection"
         }
     }
