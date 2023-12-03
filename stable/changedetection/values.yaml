@@ -1,0 +1,9 @@
+changedetectionNetwork:
+  webPort: 20017
+
+changedetectionStorage:
+  hostPath: /tmp/test/changedetection/
+
+changedetectionRunAs:
+  user: 1000
+  group: 1000

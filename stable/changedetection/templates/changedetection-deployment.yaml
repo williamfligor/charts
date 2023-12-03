@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: changedetection
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: changedetection
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+    spec:
+      containers:
+        - env:
+            - name: PGID
+              value: "{{ .Values.changedetectionRunAs.group }}"
+            - name: PLAYWRIGHT_DRIVER_URL
+              value: ws://playwright-chrome:3000/?stealth=1&--disable-web-security=true
+            - name: PORT
+              value: "{{ .Values.changedetectionNetwork.webPort }}"
+            - name: PUID
+              value: "{{ .Values.changedetectionRunAs.user }}"
+          image: ghcr.io/dgtlmoon/changedetection.io
+          name: changedetection
+          ports:
+            - containerPort: {{ .Values.changedetectionNetwork.webPort }}
+              hostPort: {{ .Values.changedetectionNetwork.webPort }}
+              protocol: TCP
+          securityContext:
+            runAsUser: {{ .Values.changedetectionRunAs.user }}
+            runAsGroup: {{ .Values.changedetectionRunAs.group }}
+            readOnlyRootFilesystem: false
+          resources: {}
+          volumeMounts:
+            - mountPath: /datastore
+              name: changedetection-hostpath0
+      hostname: changedetection
+      restartPolicy: Always
+      volumes:
+        - hostPath:
+            path: {{ .Values.changedetectionStorage.hostpath }}
+          name: changedetection-hostpath0
+status: {}

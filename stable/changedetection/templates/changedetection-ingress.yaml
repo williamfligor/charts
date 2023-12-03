@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: changedetection
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: changedetection
+                port:
+                  number: {{ .Values.changedetectionNetwork.webPort }}
+            path: /
+            pathType: Prefix
+status:
+  loadBalancer: {}

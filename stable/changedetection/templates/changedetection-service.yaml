@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: changedetection
+spec:
+  ports:
+    - name: "{{ .Values.changedetectionNetwork.webPort }}"
+      nodePort: {{ .Values.changedetectionNetwork.webPort }}
+      port: {{ .Values.changedetectionNetwork.webPort }}
+      targetPort: {{ .Values.changedetectionNetwork.webPort }}
+  selector:
+    io.kompose.service: changedetection
+  type: NodePort
+status:
+  loadBalancer: {}

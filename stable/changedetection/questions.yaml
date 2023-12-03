@@ -1,0 +1,69 @@
+groups:
+  - name: Network Configuration
+    description: Configure Network for Changedetection
+  - name: Storage Configuration
+    description: Configure Storage for Changedetection
+
+portals:
+  web_portal:
+    protocols:
+      - "$kubernetes-resource_configmap_portal_protocol"
+    host:
+      - "$kubernetes-resource_configmap_portal_host"
+    ports:
+      - "$kubernetes-resource_configmap_portal_port"
+    path: "$kubernetes-resource_configmap_portal_path"
+
+questions:
+  - variable: changedetectionRunAs
+    label: ""
+    group: User and Group Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: user
+          label: User ID
+          description: The user id that changedetection will run as.
+          schema:
+            type: int
+            min: 2
+            default: 568
+            required: true
+        - variable: group
+          label: Group ID
+          description: The group id that changedetection will run as.
+          schema:
+            type: int
+            min: 2
+            default: 568
+            required: true
+
+  - variable: changedetectionStorage
+    label: ""
+    group: Storage Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: hostPath
+          label: Host Path
+          description: The host path to use for storage.
+          schema:
+            type: hostpath
+            immutable: true
+            required: true
+
+  - variable: changedetectionNetwork
+    label: ""
+    group: Network Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: webPort
+          label: Web Port
+          description: The port for the Changedetection Web UI.
+          schema:
+            type: int
+            default: 20019
+            min: 9000
+            max: 65535
+            required: true
