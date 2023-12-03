@@ -44,6 +44,6 @@ spec:
       restartPolicy: Always
       volumes:
         - hostPath:
-            path: {{ .Values.changedetectionStorage.hostpath }}
+            path: "{{ .Values.changedetectionStorage.hostpath }}"
           name: changedetection-hostpath0
 status: {}
