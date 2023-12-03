@@ -1,6 +1,6 @@
 name: changedetection
 description: A generated Helm Chart for changedetection from Skippbox Kompose
-version: 0.0.1
+version: 0.0.0
 apiVersion: v2
 keywords:
   - changedetection
