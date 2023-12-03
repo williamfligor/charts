@@ -5,4 +5,5 @@ apiVersion: v2
 keywords:
   - changedetection
 sources:
-home:
+  - https://github.com/dgtlmoon/changedetection.io
+home: https://github.com/dgtlmoon/changedetection.io
