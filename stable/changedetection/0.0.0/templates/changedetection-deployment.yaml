@@ -45,5 +45,5 @@ spec:
       volumes:
         - hostPath:
             path: "{{ .Values.changedetectionStorage.hostpath }}"
-        name: changedetection-hostpath0
+          name: changedetection-hostpath0
 status: {}
