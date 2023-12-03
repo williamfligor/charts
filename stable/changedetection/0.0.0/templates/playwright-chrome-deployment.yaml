@@ -12,6 +12,8 @@ spec:
   strategy: {}
   template:
     metadata:
+      labels:
+        io.kompose.service: playwright-chrome
     spec:
       containers:
         - env:
