@@ -1,6 +1,8 @@
 groups:
   - name: Network Configuration
     description: Configure Network for Changedetection
+  - name: User and Group Configuration
+    description: Configure User and Group for Changedetection
   - name: Storage Configuration
     description: Configure Storage for Changedetection
 
