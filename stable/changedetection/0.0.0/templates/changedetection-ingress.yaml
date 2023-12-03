@@ -1,6 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  labels:
+    io.kompose.service: changedetection
   name: changedetection
 spec:
   rules:

@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    io.kompose.service: playwright-chrome
   name: playwright-chrome
 spec:
   replicas: 1
