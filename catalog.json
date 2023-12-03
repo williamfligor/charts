@@ -4,6 +4,8 @@
             "categories": [
                 "utility"
             ],
+            "healthy": true,
+            "healthy_error": null,
             "location": "/__w/charts/charts/charts/changedetection",
             "name": "changedetection"
         }
