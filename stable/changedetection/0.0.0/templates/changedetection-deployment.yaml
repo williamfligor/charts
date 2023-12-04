@@ -26,7 +26,7 @@ spec:
               value: "{{ .Values.changedetectionNetwork.webPort }}"
             - name: PUID
               value: "{{ .Values.changedetectionRunAs.user }}"
-          image: ghcr.io/dgtlmoon/changedetection.io
+          image: ubuntu #ghcr.io/dgtlmoon/changedetection.io
           name: changedetection
           ports:
             - containerPort: {{ .Values.changedetectionNetwork.webPort }}
