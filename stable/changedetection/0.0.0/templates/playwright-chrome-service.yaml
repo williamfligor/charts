@@ -8,7 +8,7 @@ spec:
   ports:
     - name: "ws"
       port: 3000
-      targetPort: 30000
+      targetPort: 3000
   selector:
     app: playwright-chrome
   type: ClusterIP
