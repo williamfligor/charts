@@ -42,6 +42,7 @@ spec:
           image: browserless/chrome:1.60-chrome-stable
           name: playwright-chrome
           ports:
+            # TODO I'm not sure if this is necessary or not
             - containerPort: 3000
               hostPort: 3000
               protocol: TCP
