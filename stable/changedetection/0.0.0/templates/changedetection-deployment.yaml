@@ -21,7 +21,7 @@ spec:
             - name: PGID
               value: "{{ .Values.changedetectionRunAs.group }}"
             - name: PLAYWRIGHT_DRIVER_URL
-              value: ws://playwright-chrome:3000/?stealth=1&--disable-web-security=true
+              value: ws://playwright-chrome.{{`{{ .Release.Namespace }}`}}.svc.cluster.local:3000/?stealth=1&--disable-web-security=true
             - name: PORT
               value: "{{ .Values.changedetectionNetwork.webPort }}"
             - name: PUID

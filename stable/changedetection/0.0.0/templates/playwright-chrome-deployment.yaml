@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: changedetection
+    app: playwright-chrome
   name: playwright-chrome
 spec:
   replicas: 1
